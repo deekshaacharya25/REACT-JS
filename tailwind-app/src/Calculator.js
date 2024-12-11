@@ -13,7 +13,7 @@ function Calculator() {
 
   const calculateResult = () => {
     try {
-      setInput(eval(input).toString()); // Caution: Avoid eval in production. Use a safer approach for expression evaluation.
+      setInput(eval(input).toString()); 
     } catch (error) {
       setInput('Error');
     }
@@ -21,14 +21,14 @@ function Calculator() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded shadow-md w-80">
+      <div className="bg-gray-600 p-6 rounded shadow-md w-80 text-white">
         <div className="mb-4 text-xl font-semibold text-center">{input || '0'}</div>
         <div className="grid grid-cols-4 gap-2">
           {['7', '8', '9', '/'].map((value) => (
             <button
               key={value}
               onClick={() => handleClick(value)}
-              className="bg-gray-200 p-4 rounded hover:bg-gray-300"
+              className="bg-gray-200 text-black p-4 rounded hover:bg-gray-300"
             >
               {value}
             </button>
@@ -37,7 +37,7 @@ function Calculator() {
             <button
               key={value}
               onClick={() => handleClick(value)}
-              className="bg-gray-200 p-4 rounded hover:bg-gray-300"
+              className="bg-gray-200 text-black p-4 rounded hover:bg-gray-300"
             >
               {value}
             </button>
@@ -46,7 +46,7 @@ function Calculator() {
             <button
               key={value}
               onClick={() => handleClick(value)}
-              className="bg-gray-200 p-4 rounded hover:bg-gray-300"
+              className="bg-gray-200 text-black p-4 rounded hover:bg-gray-300"
             >
               {value}
             </button>
@@ -55,7 +55,7 @@ function Calculator() {
             <button
               key={value}
               onClick={() => (value === '=' ? calculateResult() : handleClick(value))}
-              className="bg-gray-200 p-4 rounded hover:bg-gray-300"
+              className="bg-gray-200 text-black p-4 rounded hover:bg-gray-300"
             >
               {value}
             </button>
