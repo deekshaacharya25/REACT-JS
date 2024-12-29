@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       {/* <File1/> */}
       {/* <File2/> */}
-      {/* <File3/> */}
-      <ReactIcon/>
+      <File3/>
+      {/* <ReactIcon/> */}
     </div>
   );
 }
